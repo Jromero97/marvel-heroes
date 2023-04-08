@@ -8,7 +8,7 @@ import {LoaderService} from "../../services/loader.service";
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
+export class MainComponent implements OnInit, OnDestroy {
   getHeroesSubscription!: Subscription;
   loadingSubscription!: Subscription;
   heroesData!: any[];
@@ -17,6 +17,8 @@ export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
   limit = 0;
   offset = 0;
   loading = false;
+  error = false;
+
   constructor(
     private heroes: HeroesService,
     private loaderService: LoaderService
@@ -29,10 +31,6 @@ export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
       this.loading = status;
     });
     this.getData();
-  }
-
-  ngAfterViewInit() {
-
   }
 
   ngOnDestroy() {
@@ -48,6 +46,8 @@ export class MainComponent implements OnInit, OnDestroy, AfterViewInit {
         this.totalPages = response.data.count / response.data.limit;
         this.limit = response.data.limit;
         this.offset = response.data.offset;
+      }, (err) => {
+        this.error = true;
       }
     );
   }

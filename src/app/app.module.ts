@@ -11,6 +11,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import {LoadingInterceptor} from "./shared/interceptors/loading.interceptor";
+import { ErrorMessageComponent } from './components/error-message/error-message.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {LoadingInterceptor} from "./shared/interceptors/loading.interceptor";
     SearchbarComponent,
     FilterPipe,
     PaginationComponent,
-    LoaderComponent
+    LoaderComponent,
+    ErrorMessageComponent
   ],
     imports: [
         BrowserModule,

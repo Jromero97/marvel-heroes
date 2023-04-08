@@ -1,0 +1,24 @@
+.error__container {
+  position: fixed;
+  background-color: crimson;
+  bottom: 0;
+  height: 20px;
+  width: 100%;
+  padding: 1em;
+  animation: showup .5s;
+}
+
+.error__label {
+  color: white;
+  font-family: Montserrat, sans-serif;
+}
+
+@keyframes showup {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 20px;
+  }
+}
