@@ -1,0 +1,62 @@
+.heroes__title {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 1em;
+}
+
+.hero__image {
+  width: 100px;
+  height: 100px;
+}
+
+.hero__container {
+  display: flex;
+  background-color: teal;
+  margin: 1em;
+  padding: 1em;
+  border-radius: 5px;
+
+  .hero__row {
+    display: flex;
+
+    .hero__image-container {
+      margin-right: 2em;
+    }
+
+    .hero__data {
+      display: flex;
+      flex-direction: column;
+
+      .hero__description {
+        color: white;
+        font-weight: normal;
+        font-family: Montserrat, sans-serif;
+        font-size: 12px;
+        padding-top: 1em;
+      }
+      .hero__no-description {
+        color: white;
+        font-weight: normal;
+        font-family: Montserrat, sans-serif;
+        font-size: 12px;
+        padding-top: 1em;
+        font-style: italic;
+      }
+    }
+  }
+
+  .hero__name {
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: bolder;
+  }
+
+  .hero__country {
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+  }
+}

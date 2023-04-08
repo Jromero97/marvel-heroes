@@ -1,0 +1,10 @@
+<app-loader *ngIf="loading"></app-loader>
+  <app-searchbar (searchValue)="listenSearchValue($event)"></app-searchbar>
+  <app-heroes [data]="heroesData" [filterTerm]="filterTerm"></app-heroes>
+  <app-pagination
+    [total]="totalResults"
+    [pagesCount]="totalPages"
+    [limit]="limit"
+    [offset]="offset"
+    (updatePage)="updatePage($event)"
+  ></app-pagination>

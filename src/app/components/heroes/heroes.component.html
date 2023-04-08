@@ -1,0 +1,21 @@
+<ng-container *ngIf="data && data.length > 0; else noData">
+  <span class="heroes__title">Marvel Characters</span>
+  <div class="hero__container" *ngFor="let hero of data | filter: filterTerm">
+    <div class="hero__row">
+      <div class="hero__image-container">
+        <img [src]="createHeroSrc(hero)" [alt]="hero.name" class="hero__image">
+      </div>
+      <div class="hero__data">
+        <span class="hero__name">{{hero.name}}</span>
+        <span *ngIf="hero.description; else noDescription" class="hero__description">{{hero.description}}</span>
+        <ng-template #noDescription>
+          <span class="hero__no-description">No description provided</span>
+        </ng-template>
+      </div>
+    </div>
+
+  </div>
+</ng-container>
+<ng-template #noData>
+  <span>Data not found</span>
+</ng-template>

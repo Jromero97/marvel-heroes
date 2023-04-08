@@ -1,0 +1,30 @@
+.pagination__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.pagination__results {
+  font-family: Montserrat, sans-serif;
+  margin-left: 1em;
+}
+
+.pagination__button {
+  background-color: #512DA8;
+  color: white;
+  border: none;
+  font-family: Montserrat, sans-serif;
+  padding: 1em;
+
+  &.left {
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  &.right {
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+}

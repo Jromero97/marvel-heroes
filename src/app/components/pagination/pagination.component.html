@@ -1,0 +1,6 @@
+<div class="pagination__container">
+  <button class="pagination__button left" [disabled]="offset === 0" (click)="updateCurrentPage('prev')">Previous Page</button>
+  <button class="pagination__button right" (click)="updateCurrentPage('next')">Next Page</button>
+  <span class="pagination__results">Showing {{limit}} from {{total}}</span>
+</div>
+
